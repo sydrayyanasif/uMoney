@@ -1,0 +1,475 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+header{
+    background: #37517e;
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    height: 100%;
+    display: flex;
+}
+
+header .logo a{
+    text-decoration: none;
+}
+
+header .logo a h3{
+    color: #fff;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+header .logo a h3:hover{
+    color: #19b3d3;
+}
+
+header h2{
+    font-size: 40px;
+    color: white;
+}
+
+.user-pic{
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.7s;
+}
+
+.sub-menu-wrap.open-menu{
+    max-height: 400px;
+}
+
+.sub-menu{
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    right: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+}
+
+.user-info h3{
+    font-weight: 500;
+}
+
+.user-info img{
+    width: 60px;
+    height: 60px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.sub-menu hr{
+    border: 0;
+    height: 2px;
+    width: 100%;
+    background: #ccc;
+    margin: 15px 0 10px;    
+}
+
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+}
+
+.sub-menu-link p{
+    width: 100%;
+}
+
+.sub-menu-link i{
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.sub-menu-link:hover p{
+    font-weight: 600;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    height: 88.6vh;
+}
+
+/*--------------------------------------------------------------
+# Side Navigation
+--------------------------------------------------------------*/
+
+.side-nav{
+    background: #2f323a;
+    margin-top: 1px;
+    width: 20%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.side-nav a{
+    color: #fff;
+    background: #37517e;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    font-size: 18px;
+    border: 1px solid black;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.side-nav a:hover{
+    background: #47b2e4;
+    color: #22242a;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.side-nav i span{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 25px;
+}
+
+/*--------------------------------------------------------------
+# Dashbord
+--------------------------------------------------------------*/
+
+.container{
+    width: 80%;
+    min-height: 88.6vh;
+    background: #f1f1f1;
+    overflow-y: auto;
+}
+
+.container::-webkit-scrollbar{
+    scroll-behavior: smooth;
+    width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background-color: #444;
+    border-radius: 20px;
+}
+
+.container .cards{
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .cards .card{
+    width: 320px;
+    height: 150px;
+    background: white;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .cards .card .box h2{
+    color: #444;
+}
+
+.container .cards .card .box h3{
+    color: #999;
+}
+
+.container .cards .card .img-box i{
+    font-size: 50px;
+    margin: 0px 20px;
+}
+
+/*--------------------------------------------------------------
+# Transaction
+--------------------------------------------------------------*/
+
+.container .content{
+    background: white;
+    margin: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px solid #999;
+}
+
+#print-img{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#print table{
+    width: 100%;
+    padding: 10px;
+}
+
+th,
+td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+.container .content .title .search{
+    display: flex;
+}
+
+.container .content .title .search input[type=search]{
+    background: #f1f1f1;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+/* .container .content .title .search button{
+    cursor: pointer;
+}
+
+.container .content .title .search button img{
+    width: 30px;
+    height: 30px;
+} */
+
+/*--------------------------------------------------------------
+# Deposit Withdraw Transfer
+--------------------------------------------------------------*/
+
+.container .dep-with-tr{
+    background: white;
+    margin: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+}
+
+.container .dep-with-tr .input-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .dep-with-tr .input-box label{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 15px 0px ;
+}
+
+.container .dep-with-tr .input-box input{
+    font-size: 16px;
+    width: 75%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 3px solid #999;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+
+.container .dep-with-tr .submit-box{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container .dep-with-tr input[type="submit"]{
+    font-size: 18px;
+    opacity: 0.8;
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.container .dep-with-tr form input[type="submit"]:active{
+    opacity: 0.3;
+    transition :1s all ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Profile
+--------------------------------------------------------------*/
+
+.profile{
+    height: auto;
+    background-color: white;
+    display: flex;
+    margin: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.profile .left-side{
+    width: 30%;
+}
+
+.profile .left-side .img-box{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.profile .left-side .input-box{
+    display: flex;
+}
+
+.profile .left-side .input-box input{
+    width: 93%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid #4286f5;
+    padding: 10px;
+    outline: none;
+    background-color: transparent;
+}
+
+.profile .right-side{
+    width: 70%;
+    border-left: 5px groove #4286f5;
+    padding: 30px;
+}
+
+.profile .right-side .input-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile .right-side .input-box label{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 15px 0px;
+}
+
+.profile .right-side .input-box input{
+    width: 65%;
+    font-size: 18px;
+    border: none;
+    padding: 13px;
+    margin: 5px 0px;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 3px solid #4286f5;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer{
+    font-size: 14px;
+    background: #37517e;
+}
+  
+#footer .footer-bottom{
+    padding: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+  
+#footer .credits a{
+    transition: 0.3s;
+    text-decoration: none;
+    color: #47b2e4;
+}
+  
+@media (max-width: 768px){
+
+    #footer .footer-bottom{
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  
+    #footer .copyright,
+    #footer .credits{
+      text-align: center;
+      float: none;
+    }
+  
+    #footer .credits{
+      padding-top: 4px;
+    }
+}
+
+
+/* @media screen and (max-width: 1000px){
+    .main .side-nav i span{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 940px){
+    .main .side-nav i span{
+        display: none;
+    }
+    .main .side-nav{
+        align-items: center;
+    }
+    .side-menu li img{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 536px){
+    .logo h3{
+        font-size: 16px;
+    }
+    .container .content .cards{
+        justify-content: center;
+    }
+    .side-menu li img{
+        width: 30px;
+        height: 30px;
+    }
+    .container .content .content-2 .recent-payments table th:nth-child(2),
+    .container .content .content-2 .recent-payments table td:nth-child(2){
+        display: none;
+    }
+} */

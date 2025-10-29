@@ -1,0 +1,130 @@
+/* Main container background */
+#main {
+    background: linear-gradient(rgba(0, 80, 45, 0.6), rgba(0, 80, 45, 0.6)),
+                url(../img/cta-bg.jpg) center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form box container */
+.box {
+    position: relative;
+    background: #f4fff8;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 40px 50px;
+    margin: 100px 0;
+    max-width: 420px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 128, 64, 0.2);
+}
+
+/* Inside form styling */
+.box form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.box form h2 {
+    color: #047857; /* emerald green */
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Input container */
+.box form .inputBox {
+    position: relative;
+    width: 100%;
+}
+
+/* Input field */
+.box form .inputBox input {
+    width: 100%;
+    padding: 15px 10px;
+    background: #e8f5ec;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #065f46;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.box form .inputBox input::placeholder {
+    color: #6b7280;
+}
+
+.box form .inputBox input:focus {
+    border-color: #10b981;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+}
+
+/* Label-like span (removed animation, simplified modern look) */
+.box form .inputBox span {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.box form .inputBox input:focus ~ span,
+.box form .inputBox input:valid ~ span {
+    top: 5px;
+    font-size: 0.8rem;
+    color: #047857;
+}
+
+/* Links styling */
+.box form .links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+}
+
+.box form .links a {
+    font-size: 0.95rem;
+    color: #047857;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.box form .links a:hover {
+    color: #10b981;
+}
+
+/* Submit button */
+.box form input[type="submit"] {
+    font-size: 1.1rem;
+    color: white;
+    background: linear-gradient(135deg, #10b981, #059669);
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.box form input[type="submit"]:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+}
+
+.box form input[type="submit"]:active {
+    transform: scale(0.98);
+}
